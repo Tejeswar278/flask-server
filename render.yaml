@@ -1,0 +1,7 @@
+services:
+  - name: flask-server
+    type: web
+    env: python
+    buildCommand: pip install -r requirement.txt
+    startCommand: gunicorn -w 4 -b 0.0.0.0:8080 wiki_sc_aper:app
+    baseDir: wiki_sc_aper 
